@@ -1,0 +1,39 @@
+class robust{
+public static void main(String args[]){
+int x,y,z,j,n,lbx=20,lby=70,lbz=20,ubx=40,uby=60,ubz=90;
+int nomx,nomy,nomz;
+nomx=(lbx+ubx)/2;
+nomy=(lby+uby)/2;
+nomz=(lbz+ubz)/2;
+System.out.println("X TESTPOINTS: "+(lbx-1)+" "+(lbx)+" "+(lbx+1)+" "+(nomx)+" "+(ubx-1)+" "+(ubx)+" "+(ubx+1));
+System.out.println("Y TESTPOINTS: "+(lby-1)+" "+(lby)+" "+(lby+1)+" "+(nomy)+" "+(uby-1)+" "+(uby)+" "+(uby+1));
+System.out.println("Z TESTPOINTS: "+(lbz-1)+" "+(lbz)+" "+(lbz+1)+" "+(nomz)+" "+(ubz-1)+" "+(ubz)+" "+(ubz+1));
+int tot=6*3+1;
+int[] xar={10,20,30,40};
+int[] yar={50,60,70,80};
+int[] zar={90,11,22,33};
+int k=1;
+
+for(j=0;j<7;j++){
+System.out.println("TEST: "+k+" "+nomx+" "+nomy+" "+zar[j]);
+k=k+1;
+}
+
+for(j=0;j<7;j++){
+if(nomx!=xar[j]){
+System.out.println("TEST: "+k+" "+xar[j]+" "+nomy+" "+nomz);
+k=k+1;
+}
+}
+
+for(j=0;j<7;j++){
+if(nomy!=yar[j]){
+System.out.println("TEST: "+k+" "+nomx+" "+yar[j]+" "+nomz);
+}
+}
+}
+}
+
+
+
+
